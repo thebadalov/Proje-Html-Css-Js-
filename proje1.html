@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Proje 1</title>
+<script type="text/javascript">
+var renkdegisim= new Array ("#ff0000","#00ff00","#0000ff","#545454","#878787","#000000","#ffffff");
+var renk;
+                    function renkdegis()
+                    {
+
+                                  renk =[Math.floor(Math.random() * 6)];
+                           document.getElementById("body","margin: 100px auto").style.background= renkdegisim[renk];
+}
+var basla;
+function start () {
+  basla=setInterval(renkdegis,1000);
+}
+
+//console.log(222)
+function stop(){
+  //console.log(basla,'asdasd')
+clearInterval(basla);
+}
+             </script>
+
+
+
+</head>
+<body id="body">
+           <input type="button" value="START" onclick="start()"/>
+           <input type="button" value="STOP" onclick="stop()"/>
+</body>
+</html>
